@@ -8,15 +8,7 @@
 </div>
 
 <div class="messages">
-  <% 2.times do %>
-    <div class="message">
-      <div class="name-date">
-        <p class="name"><%= "Tom"%></p>
-        <p class="date-time"><%= "2020/3/31(Wed) 12:43:30" %></p>
-      </div>
-      <p class="post-message"><%= "おはよう" %></p>
-    </div>
-  <% end %>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
